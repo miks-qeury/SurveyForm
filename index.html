@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Доставка пельмешек</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -15,138 +14,69 @@
 		</header>
 		<main class="content" >
 			<form id="survey-form" action="" method="GET">
-				
-				<label class="form-container"  id="name-label">
-					<div class="form-title">Укажите ваше имя</div>
-					<div class="input">
-						<input autofocus type="text" name="name" id="name" class="input-field" placeholder="Ваше имя" required>
-					</div>
-				</label>
-				<label class="form-container" id="email-label">
-					<div class="form-title">Укажите ваш email</div>
-					<div class="input">
-						<input type="email" name="email" id="email" class="input-field" required placeholder="Ваш email">
-					</div>
-				</label>
-
-				<label class="form-container">
+				<div class="form-container">
+					<label for="name" class="form-title">Введите ваше имя</label>
+					<input type="name"  name="name"  id="name" placeholder="Ваше имя">
+				</div>
+				<div class="form-container">
+					<label for="email" class="form-title">Введите ваш email</label>
+					<input type="email" name="email" id="email" placeholder="Ваш email">
+				</div>
+				<div class="form-container">
 					<div class="form-title">Укажите ваш пол</div>
-					<div class="input">
-						<input type="radio" value="2" name="sex">
-						<span>Мужской</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="sex">
-						<span>Женский</span>
-					</div>
-				</label>
-				<label class="form-container" id="number-label">
-					<div class="form-title">Укажите ваш возраст</div>
-					<div class="input">
-						<input type="number" name="age" placeholder="ваш возраст" id="number" min="1" max="125">
-					</div>
-				</label>
-				<label class="form-container">
-					<div class="form-title">Покупали ли вы когда нибудь пельмешки?</div>
-					<div class="input">
-						<input type="radio" value="2" name="buy-dump">
-						<span>да</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="buy-dump">
-						<span>нет</span>
-					</div>
-				</label>
-
-				<label class="form-container">
+					<label><input type="radio" value="1" name="sex">Мужской</label>
+					<label><input type="radio" value="2" name="sex">Женский</label>
+				</div>
+				<div class="form-container">
+					<label for="age" class="form-title">Укажите ваш возраст</label>
+					<input type="number" name="age" id="age" placeholder="" min="1" max="128">
+				</div>
+				<div class="form-container">
+					<div class="form-title">Покупали ли вы когда-нибудь пельмешки?</div>
+					<label><input type="radio" value="1" name="buy">Да</label>
+					<label><input type="radio" value="2" name="buy">Нет</label>
+				</div>
+				<div class="form-container">
 					<div class="form-title">Где именно вы их приобретали?</div>
 					<div class="form-desc">Если вы ответили на предыдущий вопрос "да"</div>
-					<div class="input">
-						<select id="dropdown">
-							<option value="1"><span>В продуктовом магазине</span></option>
-						  	<option value="2"><span>В кондитерской</span></option>
-						  	<option value="3"><span>В специализированном магазине</span></option>
-						  	<option value="4"><span>Заказывал через службу доставки</span></option>
-						  	<option value="5"><span>Другое</span></option>
-						</select>
-					</div>
-				</label>
-				<label class="form-container">
-					<div class="form-title">Вам нравятся пельмешки или вареники?</div>
-					<div class="input">
-						<input type="checkbox" value="2" name="preferences">
-						<span>Пельмешки</span>
-					</div>
-					<div class="input">
-						<input type="checkbox" value="2" name="preferences">
-						<span>Вареники</span>
-					</div>
-				</label>
-
-				<label class="form-container">
+					<label><input type="checkbox" value="1" name="buy">В продуктовом магазине</label>
+					<label><input type="checkbox" value="2" name="buy">В кондитерской</label>
+					<label><input type="checkbox" value="3" name="buy">В специализированном магазине</label>
+					<label><input type="checkbox" value="4" name="buy">Заказывал через службу доставки</label>
+					<label><input type="checkbox" value="5" name="buy">Другое</label>
+				</div>
+				<div class="form-container">
 					<div class="form-title">Знаете ли вы что-нибудь о службах доставки пельмешек в своем городе?</div>
-					<div class="input">
-						<input type="radio" value="2" name="buy-sity">
-						<span>да</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="buy-sity">
-						<span>нет</span>
-					</div>
-				</label>
-
-				<label class="form-container">
+					<label><input type="radio" value="1" name="u-know">Да</label>
+					<label><input type="radio" value="2" name="u-know">Нет</label>
+				</div>
+				<div class="form-container">
 					<div class="form-title">Пользовались ли вы услугами доставки пельмешек?</div>
 					<div class="form-desc">Если на предыдущий вопрос ответили "да"</div>
-					<div class="input">
-						<input type="radio" value="2" name="use-delivery">
-						<span>да</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="use-delivery">
-						<span>нет</span>
-					</div>
-				</label>
-
-				<label class="form-container">
+					<label><input type="radio" value="1" name="delivery">Да</label>
+					<label><input type="radio" value="2" name="delivery">Нет</label>
+				</div>
+				<div class="form-container">
 					<div class="form-title">Стали бы вы пользоваться услугами доставки пельмешек, если бы у вас была возможность?</div>
-					<div class="input">
-						<input type="radio" value="2" name="use-now">
-						<span>да</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="use-now">
-						<span>нет</span>
-					</div>
-					<div class="input">
-						<input type="radio" value="2" name="use-now">
-						<span>уже пользуюсь</span>
-					</div>
-				</label>
-
-				<label class="form-container">
+					<label><input type="radio" value="1" name="would-you">Да</label>
+					<label><input type="radio" value="2" name="would-you">Нет</label>
+					<label><input type="radio" value="3" name="would-you">Уже пользуюсь</label>
+				</div>
+				<div class="form-container">
 					<div class="form-title">Что вы думаете о такой услуге, как доставка пельмешек?</div>
-					<div class="input">
-						<textarea name="" id=""  rows="1" placeholder="Мой ответ"></textarea>
-					</div>
-				</label>
-
-				<label class="form-container">
-					<div class="form-title">Какие ассоциации к вам приходят при слове "пельмешек"? </div>
-					<div class="input">
-						<textarea name="" id=""  rows="1" placeholder="Мой ответ"></textarea>
-					</div>
-				</label>
-
-				<label class="form-container">
-					<div class="form-title">Какими, по вашему представлению, должны быть пельмешки?</div>
-					<div class="form-desc">Дайте краткое описание того, какой пельмешек для вас является "идеальным"</div>
-					<div class="input">
-						<textarea name="" id=""  rows="1" placeholder="Мой ответ"></textarea>
-					</div>
-				</label>
-				<div class="form-container input">
-					<input type="submit" id=submit>	
+					<textarea name="" id="what-u-think" cols="30" rows="1" placeholder="Мой ответ"></textarea>
+				</div>
+				<div class="form-container">
+					<div class="form-title">Какие ассоциации к вам приходят при слове "пельмешек"?</div>
+					<textarea name="" id="assotiation" cols="30" rows="1" placeholder="Мой ответ"></textarea>
+				</div>
+				<div class="form-container">
+					<div class="form-title">Какими, по вашему представлению, должны быть пончики?</div>
+					<div class="form-desc">Дайте краткое описание того, как пончик для вас является "идеальным"</div>
+					<textarea name="" id="What " cols="30" rows="1" placeholder="Мой ответ"></textarea>
+				</div>
+				<div class="form-container">
+					<input type="submit">
 				</div>
 			</form>
 		</main>
